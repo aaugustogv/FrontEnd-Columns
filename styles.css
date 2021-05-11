@@ -1,0 +1,135 @@
+/*==========Geral==========*/
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family:"Lexend Deca";
+}
+body {
+    height: 100vh;
+    background-color:rgb(218, 210, 210);
+    overflow: hidden;
+}
+h1 {
+    font-family: "Big Shoulders Display";
+    font-size: 3rem;
+    color: var(--white);
+}
+:root {
+    
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --white: hsl(0, 0%, 95%) ;
+}
+
+/*==========Container==========*/
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*==========All Design==========*/
+
+#all-item {
+    padding: 4rem;
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.img-car {
+    margin-bottom: 2rem;
+    width: 6rem;
+}
+
+.about {
+    margin-top: 3rem;
+    color: var(--transparent-white);
+}
+
+.card-btn {
+    margin: 3rem 0 -1rem 3rem;
+    background-color: var(--white);
+    border-radius: 3rem;
+    padding: 1.2rem 4rem ;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s all;
+    font-size: 1rem;
+}
+.card-btn:hover {
+    background-color:transparent;
+    color: white;
+    border: 2px solid white;
+}
+/*==========Items==========*/
+
+.item_1 {
+    background: var(--bright-orange);
+    border-radius: 0.6rem 0 0 0.6rem;
+}
+.card-btn_1{
+    color: var(--bright-orange);
+}
+
+.item_2 {
+    background: var(--dark-cyan);
+}
+.card-btn_2{
+    color: var(--dark-cyan);
+}
+.item_3 {
+    background: var(--very-dark-cyan);
+    border-radius: 0 0.6rem 0.6rem 0;
+}
+.card-btn_3 {
+    color: var(--very-dark-cyan);
+}
+
+/*==========Footer==========*/
+
+footer {
+    text-align: center;
+    padding: 4rem ;
+    margin: -105px;
+}
+
+footer a {
+    text-decoration: none
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*==========Responsive==========*/
+
+@media (max-width: 1000px) {
+    body {
+        overflow-y: auto;
+    }
+    html {
+        font-size: 87.5%;
+    }
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+    #all-item {
+        margin-bottom: 0;
+    }
+    .item_1 {
+        border-radius: 0.6rem 0.6rem 0 0;
+    }
+    .item_3 {
+        border-radius: 0 0 0.6rem 0.6rem;
+    }
+}
